@@ -1,0 +1,13 @@
+.country{
+    border: 2px solid skyblue;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+}
+.country img {
+    max-width: 100%;
+    width: 300px;    
+    height: 200px;
+    object-fit: cover;
+
+}
