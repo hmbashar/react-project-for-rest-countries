@@ -6,11 +6,11 @@ import Country from '../Country/Country';
 const Countries = () => {
     const [countries, setCountries] = useState([]);
 
-    const [visitedCountry, setVisitedCountry] = useState([]);
+    const [visitedCountries, setvisitedCountries] = useState([]);
 
-    const handelVisitedCountries = country => {
-        console.log(country);
-        setVisitedCountry(country);
+    const handelVisitedCountries = country => { 
+        const newVisitedCountries = [...visitedCountries, country];
+        setvisitedCountries(newVisitedCountries);
     }
 
     useEffect(() => {
@@ -21,7 +21,18 @@ const Countries = () => {
 
     return (
         <div>
+            <h2>Total Visited Countries: {visitedCountries.length}</h2>
+
+            <ul>
+               {
+                visitedCountries.map(country => <li key={country.cca2}>{
+                    country.name.common
+                }</li>)
+               }
+            </ul>
+
             <h3>Countries {countries.length}</h3>
+            
 
             <div className="countries-area">
                 {
