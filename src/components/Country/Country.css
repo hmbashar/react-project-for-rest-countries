@@ -11,3 +11,10 @@
     object-fit: cover;
 
 }
+.country p {
+    margin: 0;
+}
+
+.country button {
+    margin-top: 10px;
+}
