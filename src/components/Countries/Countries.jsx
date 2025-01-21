@@ -25,7 +25,7 @@ const Countries = () => {
 
             <ul>
                {
-                visitedCountries.map(country => <li key={country.cca2}>{
+                visitedCountries.map((country, index) => <li key={index}>{
                     country.name.common
                 }</li>)
                }

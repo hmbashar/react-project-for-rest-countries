@@ -1,3 +1,4 @@
+import CountryDetails from '../CountryDetails/CountryDetails';
 import './Country.css';
 import {useState} from 'react';
 
@@ -27,6 +28,12 @@ const Country = ({country, handelVisitedCountries}) => {
            <button onClick={() => handelVisitedCountries(country)}>Mark Visited</button>
            <button onClick={handelVisited }>{visited ? 'Visited' : 'Visit'}</button>
            <p>{visited ? 'I have visted this country.' : 'Will go for visit inshaAllah'}</p>
+           <hr />
+           <CountryDetails
+           country={country}
+           handelVisited={handelVisited}
+           handelVisitedCountries={handelVisitedCountries}
+           ></CountryDetails>
         </div>
     );
 };
