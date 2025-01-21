@@ -6,6 +6,13 @@ import Country from '../Country/Country';
 const Countries = () => {
     const [countries, setCountries] = useState([]);
 
+    const [visitedCountry, setVisitedCountry] = useState([]);
+
+    const handelVisitedCountries = country => {
+        console.log(country);
+        setVisitedCountry(country);
+    }
+
     useEffect(() => {
         fetch('https://restcountries.com/v3.1/all')
             .then(res => res.json())
@@ -18,7 +25,7 @@ const Countries = () => {
 
             <div className="countries-area">
                 {
-                    countries.map(country => <Country key={country.cca2} country={country}></Country>)
+                    countries.map(country => <Country key={country.cca2} handelVisitedCountries={handelVisitedCountries} country={country}></Country>)
                 }
             </div>
 

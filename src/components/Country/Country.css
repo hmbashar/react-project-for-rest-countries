@@ -18,3 +18,7 @@
 .country button {
     margin-top: 10px;
 }
+.visited-color button {
+    background-color: blanchedalmond;
+    color: rgb(10, 11, 103);
+}
